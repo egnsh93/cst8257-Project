@@ -9,6 +9,9 @@ class Course extends Model
         parent::__construct();
     }
 
+	/**
+	 * Select a course offering by ID, semester, and year
+	 */
     public function getCourseOffering($id, $semester, $year) {
 		return $this->db->select("
 			SELECT course.CourseCode, course.Title, course.WeeklyHours, semester.Term 
@@ -23,6 +26,9 @@ class Course extends Model
 			));
     }
     
+	/**
+	 * Select all course offerings that do not exist in studentcourseregistration table
+	 */
     public function getCourseOfferings($offeringYear) {
 		return $this->db->select("
 			SELECT course.CourseCode, course.Title, course.WeeklyHours, semester.YearNum, semester.Term
@@ -37,6 +43,9 @@ class Course extends Model
 			));
     }
 
+	/**
+	 * Insert a student into an offering
+	 */
     public function insertStudentIntoOffering($student_id, $course_id, $semester_id) {
 		return $this->db->insert("studentcourseregistration", [
 			'StudentId' => $student_id,
@@ -45,6 +54,9 @@ class Course extends Model
 		]);
     }
 
+	/**
+	 * Select all courses associated with a specific student id
+	 */
     public function getStudentCourses($student_id) {
 		return $this->db->select("
 			SELECT course.CourseCode, course.Title, course.WeeklyHours, studentcourseregistration.SemesterCode
