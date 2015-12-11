@@ -26,6 +26,10 @@ body {
 	margin: 20px 0;
 }
 
+.page-header {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
 
 /* Credit to bootsnipp.com for the css for the color graph */
 .colorgraph {

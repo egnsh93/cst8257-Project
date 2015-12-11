@@ -9,6 +9,7 @@ use Core\Language;
 
 <div class="page-header">
 	<h1><?php echo $data['title'] ?></h1>
+	<hr class="colorgraph">
 </div>
 
 <p>If you are satisfied with the selection, please click the save button to finalize your course registration for this year</p>

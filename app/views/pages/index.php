@@ -9,6 +9,7 @@ use Core\Language;
 
 <div class="page-header">
 	<h1><?php echo $data['title'] ?></h1>
+	<hr class="colorgraph">
 </div>
 
 <?php if (\Helpers\Session::get('loggedin') == false) : ?>
