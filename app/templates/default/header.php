@@ -34,6 +34,10 @@ $hooks = Hooks::get();
 	$hooks->run('css');
 	?>
 
+    <script type="text/javascript">
+        var BASE_URL = "<?php echo DIR; ?>";
+    </script>
+
 </head>
 <body>
 <?php
@@ -52,30 +56,30 @@ $hooks->run('afterBody');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/Home">Online Course Registration</a>
+                <a class="navbar-brand" href="<?= DIR; ?>Home">Online Course Registration</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/About/">About</a>
+                        <a href="<?= DIR; ?>About/">About</a>
                     </li>
                     <?php if (\Helpers\Session::get('loggedin')) : ?>
                     <li>
-                        <a href="/Courses/">Course Selection</a>
+                        <a href="<?= DIR; ?>Courses/">Course Selection</a>
                     </li>
                     <li>
-                        <a href="/RegisteredCourses/">Current Registration</a>
+                        <a href="<?= DIR; ?>RegisteredCourses/">Current Registration</a>
                     </li>
                     <li>
-                        <a href="/Logout">Logout</a>
+                        <a href="<?= DIR; ?>Logout/">Logout</a>
                     </li>
                     <?php else : ?>
                     <li>
-                        <a href="/Login">Login</a>
+                        <a href="<?= DIR; ?>Login/">Login</a>
                     </li>
                     <li>
-                        <a href="/Register">Register</a>
+                        <a href="<?= DIR; ?>Register/">Register</a>
                     </li>
                     <?php endif; ?>
                 </ul>

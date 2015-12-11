@@ -12,7 +12,7 @@ use Core\Language;
 </div>
 
 <?php if (\Helpers\Session::get('loggedin') == false) : ?>
-	<p>In order to access our registration system, you must first <a href="/Login/">login</a> or <a href="/Register/">create an account</a></p>
+	<p>In order to access our registration system, you must first <a href="<?= DIR; ?>Login/">login</a> or <a href="<?= DIR; ?>Register/">create an account</a></p>
 
 <?php else : ?>
 	<p>Under construction</p>

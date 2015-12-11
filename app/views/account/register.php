@@ -67,7 +67,7 @@ use Core\Language;
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<label>Already registered?</label>
-					<a href="/Login" class="btn btn-success btn-block btn-lg" tabindex="7">Sign In</a>
+					<a href="<?= DIR; ?>Login/" class="btn btn-success btn-block btn-lg" tabindex="7">Sign In</a>
 				</div>
 			</div>
 		</form>
