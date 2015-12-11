@@ -52,30 +52,30 @@ $hooks->run('afterBody');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/Lab9/Home">Online Course Registration</a>
+                <a class="navbar-brand" href="/Home">Online Course Registration</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/Lab9/About/">About</a>
+                        <a href="/About/">About</a>
                     </li>
                     <?php if (\Helpers\Session::get('loggedin')) : ?>
                     <li>
-                        <a href="/Lab9/Courses/">Course Selection</a>
+                        <a href="/Courses/">Course Selection</a>
                     </li>
                     <li>
-                        <a href="/Lab9/RegisteredCourses/">Current Registration</a>
+                        <a href="/RegisteredCourses/">Current Registration</a>
                     </li>
                     <li>
-                        <a href="/Lab9/Logout">Logout</a>
+                        <a href="/Logout">Logout</a>
                     </li>
                     <?php else : ?>
                     <li>
-                        <a href="/Lab9/Login">Login</a>
+                        <a href="/Login">Login</a>
                     </li>
                     <li>
-                        <a href="/Lab9/Register">Register</a>
+                        <a href="/Register">Register</a>
                     </li>
                     <?php endif; ?>
                 </ul>

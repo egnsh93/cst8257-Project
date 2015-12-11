@@ -3,7 +3,7 @@
 	    $("#yearDropdown").change(function (e) {
 	        $.ajax({
 	            type: "POST",
-	            url: "/Lab9/Courses",
+	            url: "/Courses",
 	            data: { courseId: $(this).val() },
 	            cache: false,
 	            success: function (result) {
